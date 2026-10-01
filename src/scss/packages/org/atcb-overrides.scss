@@ -1,6 +1,4 @@
-@import "add-to-calendar-button/assets/css/atcb";
-
-:host {
+add-to-calendar-button {
     --font: var(--bs-font-sans-serif);
     --base-font-size-l: 1rem;
     --base-font-size-m: 1rem;
@@ -26,21 +24,8 @@
     --list-modal-shadow: none;
 }
 
-.atcb-button {
-    &:not(.atcb-no-text):not(.atcb-modal-style):not(.atcb-dropoverlay):not(.atcb-single) {
-        min-width: auto;
-    }
-
-    &:not([disabled]),
-    &.atcb-active:not(.atcb-modal-style):not(.atcb-dropoverlay) {
-        padding: var(--btn-padding-y) var(--btn-padding-x) !important;
-        margin: 0 !important;
-
-        &:focus,
-        &:hover {
-            padding: var(--btn-padding-y) var(--btn-padding-x) !important;
-        }
-    }
+add-to-calendar-button::part(atcb-button) {
+    margin: 0 !important;
 }
 
 /* stylelint-disable-next-line selector-id-pattern */
